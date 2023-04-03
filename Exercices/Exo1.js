@@ -7,21 +7,21 @@
 // 3. Pensez à gérer également les erreurs de saisi dans le jeu.
 
 const num = Math.floor(Math.random() * 100) + 1;
-const essai = 0;
+const count = 0;
 
 function Game() {
     const choose = document.form1.devine1.value;
-    essai++;
-    const status = "Nombre d'essais : " + essai;
+    count++;
+    const status = "Nombre d'essais : " + count;
     if (choose < num)
         document.form1.indice.value = "Non, le nombre est plus grand.";
     if (choose > num)
         document.form1.indice.value = "Non, le nombre est plus petit.";
     if (choose == num) {
-        window.alert("Correct ! Vous avez trouvé en " + essai + "essais.");
+        window.alert("Correct ! Vous avez trouvé en " + count + "essais.");
         location.reload();
     }
-    if (essai == 10) {
+    if (count == 10) {
         window.alert("Désolé, c'est fini. Le nombre correct était : " + num);
         location.reload();
     }
