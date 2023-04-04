@@ -1,3 +1,3 @@
-const u = require('utils.js');
+const u = require('utils');
 
 const http = require('http');
